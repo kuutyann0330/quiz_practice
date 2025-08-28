@@ -67,6 +67,24 @@ function answerCheck(ans) {
     const btnBox = document.getElementById("btn-box");
     btnBox.style.display = 'none';
 
+    // 新しい <button> 要素を作成
+    const newButton = document.createElement('button');
+    // ボタンのテキストを設定
+    newButton.textContent = 'もう一度挑戦する';
+
+    // ボタンにIDやクラスを追加することも可能
+    newButton.id = 'retry-button';
+
+    // body要素に新しいボタンを追加
+    document.body.appendChild(newButton);
+
+    // ボタンにクリックイベントを追加（新しいクイズを開始する関数を呼び出すなど）
+    newButton.addEventListener('click', function () {
+      // 例: ページをリロードして最初からやり直す
+      location.reload();
+    });
+
+
 
   } else {
     quizSet();
