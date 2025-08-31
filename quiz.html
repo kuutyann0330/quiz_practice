@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>クイズ</title>
+  <link rel="stylesheet" href="./css/quiz.style.css">
+  <!-- <link rel="stylesheet" href="reset.css"> -->
+</head>
+
+<body>
+  <h1>クイズ</h1>
+  <h2 id="question">ここに問題表示</h2>
+
+  <ul>
+    <li id="ans1">選択１</li>
+    <li id="ans2">選択２</li>
+    <li id="ans3">選択３</li>
+  </ul>
+
+  <div id="btn-box" class ="btn-box"><!-- onClick ボタンをクリックしたらイベントを発生させることができる 
+                              今回はJS側のanswerCheckメソッドに数を渡す-->
+    <button type="button" id="answer1" onClick="answerCheck(1)">回答１</button>
+    <button type="button" id="answer2" onClick="answerCheck(2)">回答２</button>
+    <button type="button" id="answer3" onClick="answerCheck(3)">回答３</button>
+  </div>
+
+  <a href="geme.html" class="topmenu_a">メインメニュー</a>
+  <script src="./JS/main.js"></script>
+</body>
+
+</html>

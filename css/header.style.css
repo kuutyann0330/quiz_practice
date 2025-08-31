@@ -1,0 +1,46 @@
+/* ヘッダー全体の設定 */
+header {
+  background-color: #f6d495; /* 背景色 */
+  margin-bottom: 30px; /* headerの下の余白 */
+  padding: 20px 0 0 0; /* 上下の余白 */
+}
+
+/* ヘッダーのコンテンツを中央に寄せるためのコンテナ */
+.header-container {
+  max-width: 1500px; /* 最大幅 */
+  margin: 0 auto; /* 中央寄せ */
+  padding: 20px; /* 左右の余白 */
+  display: flex; /* Flexboxを有効にする */
+  justify-content: space-between; /* 要素を両端に配置 */
+  align-items: center; /* 要素を垂直方向に中央寄せ */
+  border-bottom:2px solid #333;
+}
+
+
+/* ロゴのスタイル */
+.logo {
+  font-size: 24px; /* フォントサイズ */
+  font-weight: bold; /* 太字 */
+  text-decoration: none; /* 下線をなくす */
+  color: #333; /* 文字色 */
+}
+
+/* ナビゲーションメニューのスタイル */
+nav ul {
+  list-style: none; /* リストの黒点をなくす */
+  margin: 0;
+  padding: 0;
+  display: flex; /* メニュー項目を横並びにする */
+  gap: 20px; /* メニュー項目の間の隙間 */
+}
+
+nav a {
+  text-decoration: none; /* 下線をなくす */
+  color: #555; /* 文字色 */
+  font-weight: 500;
+  transition: color 0.3s; /* ホバー時の色の変化を滑らかに */
+}
+
+nav a:hover {
+  color: #000; /* ホバー時の文字色 */
+}

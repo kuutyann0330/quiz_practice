@@ -4,31 +4,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>クイズ</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <!-- <link rel="stylesheet" href="reset.css"> -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/header.style.css">
+  <link rel="stylesheet" href="./css/index.style.css">
+
+  <title>NEKOの遊び場</title>
 </head>
 
 <body>
-  <h1>クイズ</h1>
-  <h2 id="question">ここに問題表示</h2>
 
-  <ul>
-    <li id="ans1">選択１</li>
-    <li id="ans2">選択２</li>
-    <li id="ans3">選択３</li>
-  </ul>
+  <!-- ヘッダー  -->
+  <header class="header">
+    <div class="header-container">
+      <h1 class="logo">ねこのあそび場</h1>
+      <nav class="main-nav">
 
-  <div id="btn-box" class ="btn-box"><!-- onClick ボタンをクリックしたらイベントを発生させることができる 
-                              今回はJS側のanswerCheckメソッドに数を渡す-->
-    <button type="button" id="answer1" onClick="answerCheck(1)">回答１</button>
-    <button type="button" id="answer2" onClick="answerCheck(2)">回答２</button>
-    <button type="button" id="answer3" onClick="answerCheck(3)">回答３</button>
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="geme.html">ゲーム</a></li>
+          <li><a href="#">日記帳</a></li>
+          <li><a href="#">練習倉庫</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="main-container">
+    <div class="main-left">
+      <h1 class="top-title">Hello world</h1>
+    </div>
+
+    <div class="side-right">
+      <img src="./img/kizineko.jpg" alt="猫の写真 " class="myprofile-img">
+      <h1 class="my-name">kizineko</h1>
+      <p class="myprofile-text">プログラミング始めたての学生です。</p>
+      <p class="myprofile-text">学んだことをここにメモしていきます。(自己学習用)</p>
+    </div>
   </div>
-
-  
-
-  <script src="./JS/main.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,41 @@
+body {
+  background-color: #f6d4956b;
+  background-image: url(../img/nikukyuu.png); /* パスを修正 */
+
+}
+
+.main-container {
+  padding-top: 10px;
+  padding: 0 90px;
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+}
+
+.main-left {
+  background-color: white;
+}
+
+.side-right {
+  background-color: black;
+  padding: 0 30px;
+}
+
+.myprofile-img {
+  width: 20vw;
+  height: 20vw;
+  margin: 0 auto;
+}
+
+.my-name{
+  color: white;
+  margin-top: 30px;
+  border-left: solid gray;
+  padding-left: 5px;
+  font-size: 30px;
+}
+
+.myprofile-text{
+  color: white;
+  padding: 8px;/*プロフィールの書き始めの位置を操作*/
+  line-height: 1.8;
+}
