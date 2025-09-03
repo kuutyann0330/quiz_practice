@@ -1,49 +1,45 @@
-body {
-  background-color: #25480b6b;
-  background-image: url(../img/nikukyuu.png); /* パスを修正 */
-
-}
-
-.main-container {
-  padding-top: 10px;
-  margin: 0 90px;
-  grid-template-columns: 7fr 3fr;
-}
-
-.title-container{
-  display: block;
-}
-
-.title-container{
-  padding:11px 9px;
-}
-
-.top-title{
-  border-left:7px solid gray;
-  font-size: 30px;
-
-}
-
 /* 親要素: .main-flex */
 .main-flex {
-  display: flex;         /* フレックスコンテナとして設定 */
-  flex-wrap: wrap;       /* 画面幅に応じて折り返す */
-  justify-content: center; /* 子要素を中央に寄せる */
-  gap: 40px;             /* アイテム間の隙間を20pxに設定 */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-/* 子要素: .main-flex内のdiv */
+/* 子要素: ゲームのブロック全体 */
 .main-flex > div {
-  /* 4つ横に並べるための幅設定 */
-  width: calc(25% - 15px); /* 100% / 4 - 隙間の調整 */
-  max-width: 250px; /* アイテムの最大幅を設定（PC向け） */
+  width: calc(25% - 15px);
+  flex-grow: 1;
+  max-width: 250px;
   text-align: center;
 }
 
+/* 画像: .myprofile-img */
 .myprofile-img {
-  width: 20vw;
-  height: 15vw;
-  margin: 0 auto;
-  display: inline;
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
+/* -------------------------------------- */
+/* タブレット向けスタイル            */
+/* -------------------------------------- */
+/* 画面幅が768px以下になったら適用 */
+@media (max-width: 768px) {
+  .main-flex > div {
+    /* 2列に並べるための幅設定 */
+    width: calc(50% - 10px);
+  }
+}
+
+/* -------------------------------------- */
+/* スマートフォン向けスタイル          */
+/* -------------------------------------- */
+/* 画面幅が480px以下になったら適用 */
+@media (max-width: 480px) {
+  .main-flex > div {
+    /* 1列に並べるための幅設定 */
+    width: 100%;
+    max-width: none; /* 固定幅を無効化 */
+  }
 }
