@@ -29,7 +29,7 @@ body {
   display: flex;         /* フレックスコンテナとして設定 */
   flex-wrap: wrap;       /* 画面幅に応じて折り返す */
   justify-content: center; /* 子要素を中央に寄せる */
-  gap: 20px;             /* アイテム間の隙間を20pxに設定 */
+  gap: 40px;             /* アイテム間の隙間を20pxに設定 */
 }
 
 /* 子要素: .main-flex内のdiv */
@@ -45,4 +45,5 @@ body {
   height: 15vw;
   margin: 0 auto;
   display: inline;
+
 }
