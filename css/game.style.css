@@ -8,8 +8,8 @@
 
 /* 子要素: ゲームのブロック全体 */
 .main-flex > div {
-  width: calc(25% - 15px);
-  flex-grow: 1;
+  width: calc(25% - 15px);/* calc():計算式を用いた値の設定を可能とする; */
+  flex-grow: 1;/*flex-grow: 1; :flex要素群に対して余白を均等割りすることを指定;*/
   max-width: 250px;
   text-align: center;
 }
@@ -28,7 +28,7 @@
 @media (max-width: 768px) {
   .main-flex > div {
     /* 2列に並べるための幅設定 */
-    width: calc(50% - 10px);
+    width: calc(50% - 10px); /*50% = 画面上に二つ配置*/
   }
 }
 
