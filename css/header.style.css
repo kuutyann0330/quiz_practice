@@ -2,7 +2,7 @@
 header {
   background-color: #f6d495; /* 背景色 */
   margin-bottom: 30px; /* headerの下の余白 */
-  padding: 20px 0 0 0; /* 上下の余白 */
+  padding: 0px 0 0 0; /* 上下の余白 */
 }
 
 /* ヘッダーのコンテンツを中央に寄せるためのコンテナ */
@@ -13,9 +13,9 @@ header {
   display: flex; /* Flexboxを有効にする */
   justify-content: space-between; /* 要素を両端に配置 */
   align-items: center; /* 要素を垂直方向に中央寄せ */
-  border-bottom:2px solid #333;
+  border-bottom: 2px solid #333;
+  position: relative; /* 子要素の絶対配置の基準点にする*/
 }
-
 
 /* ロゴのスタイル */
 .logo {
@@ -32,6 +32,7 @@ nav ul {
   padding: 0;
   display: flex; /* メニュー項目を横並びにする */
   gap: 20px; /* メニュー項目の間の隙間 */
+  transition: transform 0.3s ease-in-out; /* スライドイン/アウトのアニメーション用 */
 }
 
 nav a {
@@ -43,4 +44,73 @@ nav a {
 
 nav a:hover {
   color: #000; /* ホバー時の文字色 */
+}
+
+/* PC版ではハンバーガーメニューを非表示 */
+.hamburger-menu {
+  display: none;
+}
+
+/* ---------------------------------- */
+/* ↓ここからモバイル対応の追加・修正↓ */
+/* ---------------------------------- */
+
+@media (max-width: 768px) {
+  /* ハンバーガーメニューを表示し、右上に配置*/
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1000;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+  
+  .hamburger-menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 3px;
+    transition: all 0.3s;
+  }
+
+  /* ハンバーガーメニューがクリックされた時のアニメーション */
+  .hamburger-menu.is-active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger-menu.is-active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-menu.is-active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* メニューリスト（ul）を初期状態では画面外に隠す*/
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #f6d495;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+  }
+  
+  /* メニューリストを非表示にする*/
+  nav ul.is-active {
+    transform: translateX(0);
+  }
 }
